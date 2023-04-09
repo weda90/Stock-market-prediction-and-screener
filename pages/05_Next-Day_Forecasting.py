@@ -22,12 +22,12 @@ st.subheader('Next-Day Forecasting with Long-Short Term Memory (LSTM)')
 csv = pd.read_csv('symbols.csv')
 symbol = csv['Symbol'].tolist()
 for i in range(0, len(symbol)):
-    symbol[i] = symbol[i] + ".NS"
+    symbol[i] = symbol[i] + ".JK"
 
 # creating sidebar
 ticker = st.selectbox(
-        'Enter or Choose NSE listed Stock Symbol',
-        symbol, index=symbol.index('TRIDENT.NS'))
+        'Enter or Choose JK listed Stock Symbol',
+        symbol, index=symbol.index('ITMG.JK'))
 
 def my_LSTM(ticker):
         try:
