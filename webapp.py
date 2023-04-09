@@ -776,7 +776,7 @@ if (feature == 'Next-Day Forecasting'):
     # creating sidebar
     ticker = st.selectbox(
         'Enter or Choose NSE listed Stock Symbol',
-        symbol, index=symbol.index('TRIDENT.NS'))
+        symbol, index=symbol.index('ITMG.JK'))
 
     def my_LSTM(ticker):
         try:
@@ -920,7 +920,7 @@ if (feature == 'Pattern Recognition'):
     st.markdown('- Bullish - The stock is in up trendline ')
     st.markdown('- Bearish - The stock is in down trendline')
     st.write('#### Select Stock ')
-    ticker_input = st.selectbox('Enter or Choose NSE listed stock', symbol,index=symbol.index('VISHWARAJ.NS'))
+    ticker_input = st.selectbox('Enter or Choose NSE listed stock', symbol,index=symbol.index('ITMG.JK'))
 
     #plotiing prices
 
