@@ -11,7 +11,7 @@ st.title('Screener')
 csv = pd.read_csv('symbols.csv')
 symbol = csv['Symbol'].tolist()
 for i in range(0, len(symbol)):
-    symbol[i] = symbol[i] + ".NS"
+    symbol[i] = symbol[i] + ".JK"
 
 st.write("A stock screener is a set of tools that allow investors to quickly sort through various parameters of the stock")
 ticker_input = st.selectbox('Enter or Choose stock', symbol)
