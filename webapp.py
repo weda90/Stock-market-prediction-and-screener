@@ -48,7 +48,7 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 csv = pd.read_csv('symbols.csv')
 symbol = csv['Symbol'].tolist()
 for i in range(0, len(symbol)):
-    symbol[i] = symbol[i] + ".NS"
+    symbol[i] = symbol[i] + ".JK"
 
 #sidebar features
 feature = st.sidebar.radio(
