@@ -11,7 +11,7 @@ import talib
 csv = pd.read_csv('symbols.csv')
 symbol = csv['Symbol'].tolist()
 for i in range(0, len(symbol)):
-    symbol[i] = symbol[i] + ".NS"
+    symbol[i] = symbol[i] + ".JK"
 
 
 st.title('Pattern Recognition')
@@ -22,7 +22,7 @@ st.markdown('- Neutral - Not such activity or no trendline present at current mo
 st.markdown('- Bullish - The stock is in up trendline ')
 st.markdown('- Bearish - The stock is in down trendline')
 st.write('#### Select Stock ')
-ticker_input = st.selectbox('Enter or Choose NSE listed stock', symbol,index=symbol.index('VISHWARAJ.NS'))
+ticker_input = st.selectbox('Enter or Choose JK listed stock', symbol,index=symbol.index('ITMG.JK'))
 
 #plotiing prices
 
