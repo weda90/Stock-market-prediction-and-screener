@@ -3,7 +3,7 @@ import numpy as np
 
 
 
-@st.cache
+@st.cache_data
 def calc_moving_average(data, size):
         df = data.copy()
         df['sma'] = df['Close'].rolling(int(size)).mean()
@@ -12,7 +12,7 @@ def calc_moving_average(data, size):
         return df
 
 #Function for Moving Average Convergence Divergence
-@st.cache
+@st.cache_data
 def calc_macd(data):
         df = data.copy()
         df['ema12'] = df['Close'].ewm(span=12, min_periods=12).mean()
@@ -23,7 +23,7 @@ def calc_macd(data):
         return df
 
 #function for bollinger Bands
-@st.cache
+@st.cache_data
 def calc_bollinger(data, size):
         df = data.copy()
         df['sma'] = df['Close'].rolling(int(size)).mean()
@@ -34,7 +34,7 @@ def calc_bollinger(data, size):
         return df
 
 #function for ATR-Average True Range
-@st.cache
+@st.cache_data
 def ATR(data, n):
         "function to calculate True Range and Average True Range"
         df = data.copy()
@@ -47,7 +47,7 @@ def ATR(data, n):
         return df2
 
     #function to calculate RSI
-@st.cache
+@st.cache_data
 def RSI(data, n):
         "function to calculate RSI"
         df = data.copy()
@@ -75,7 +75,7 @@ def RSI(data, n):
         return df
 
 #Function to calculate ADX
-@st.cache
+@st.cache_data
 def ADX(data, n):
         "function to calculate ADX"
         df2 = data.copy()
@@ -127,7 +127,7 @@ def ADX(data, n):
         return df2['ADX']
 
 #function to calculate OBV
-@st.cache
+@st.cache_data
 def OBV(DF):
         """function to calculate On Balance Volume"""
         df = DF.copy()
