@@ -16,7 +16,7 @@ st.title('Technical Indicators')
 csv = pd.read_csv('symbols.csv')
 symbol = csv['Symbol'].tolist()
 for i in range(0, len(symbol)):
-    symbol[i] = symbol[i] + ".NS"
+    symbol[i] = symbol[i] + ".JK"
 
 ticker = st.selectbox(
         'Enter or Choose NSE listed Stock Symbol',
